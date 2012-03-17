@@ -13,7 +13,8 @@ Installation
 
 The project is hosted on npm
 
-  npm install darksky
+    npm install darksky
+  
 
 Usage
 -----
@@ -21,16 +22,16 @@ Usage
 Create a client and then call one of the exposed methods. See the 
 [Dark Sky API](http://darkskyapp.com/api/) for details.
 
-  var darksky = require("darksky");
-  var client = darksky.Client("mykey");
+    var darksky = require("darksky");
+    var client = darksky.Client("mykey");
   
-  client.forecast('37.8267','-122.423', 
-    function(data) {
-      process.stdout.write(d);
-    },
-    function( err ) {
-      console.error( err );
-    }
-  );
+    client.forecast('37.8267','-122.423', 
+      function(data) {
+        process.stdout.write(d);
+      },
+      function( err ) {
+        console.error( err );
+      }
+    );
 
 
