@@ -1,0 +1,38 @@
+{
+  "name": "darksky",
+  "version": "0.1.0",
+  "description": "Dark Sky API wrapper for nodeJS",
+  "homepage": [
+    "https://github.com/awestendorf/node-darksky"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/awestendorf/node-darksky"
+  },
+  "keywords": [
+    "api",
+    "nodejs",
+    "7digital"
+  ],
+  "author": "Aaron Westendorf <aaron.westendorf@gmail.com> (https://github.com/awestendorf)",
+  "licenses": [
+    "MIT"
+  ],
+  "engines": [
+    "node >= 0.4.7"
+  ],
+  "scripts": {
+    "test": "jasmine-node --verbose spec/"
+  },
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "docco": "0.3.0",
+    "jasmine-node": "1.0.22",
+    "jshint": "0.3.0"
+  },
+  "contributors": [
+    "Aaron Westendorf <aaron.westendorf@gmail.com> (https://github.com/awestendorf)"
+  ]
+}

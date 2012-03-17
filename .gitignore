@@ -1,0 +1,11 @@
+/node_modules/
+.eprj
+.monitor
+*.css
+*.gz
+*.swp
+/build/
+tags
+npm-debug.log
+/lib/compiled/
+docs
