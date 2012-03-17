@@ -4,7 +4,7 @@ test:
 	jasmine-node --verbose spec/
 
 check:
-	jshint lib/*.js
+	jshint lib/*.js spec/*.js
 
 docs:
 	docco lib/*.js

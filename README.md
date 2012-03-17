@@ -1,4 +1,4 @@
-Node.js DarkSky API wrapper
+Node.js Dark Sky API wrapper
 ===========================
 
 [![Build Status](http://travis-ci.org/awestendorf/node-darksky.png)](http://travis-ci.org/awestendorf/node-darksky)
@@ -20,7 +20,7 @@ Usage
 -----
 
 Create a client and then call one of the exposed methods. See the 
-[Dark Sky API](http://darkskyapp.com/api/) for details.
+Dark Sky [API](http://darkskyapp.com/api/) for details.
 
 ```javascript
 var darksky = require("darksky");

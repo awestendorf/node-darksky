@@ -53,7 +53,7 @@ it("should call https request and all optional callbacks", function() {
 
   // Call the error callback to assert that it calls our callback
   request.on.argsForCall[0][1]("error");
-  expect( error ).toHaveBeenCalledWith("error")
+  expect( error ).toHaveBeenCalledWith("error");
 });
 
 it("should call https request without optional callbacks", function() {
