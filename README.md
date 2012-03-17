@@ -28,10 +28,10 @@ var client = darksky.Client("mykey");
   
 client.forecast('37.8267','-122.423', 
     function(data) {
-        process.stdout.write(d);
+        process.stdout.write(data);
     },
-    function( err ) {
-        console.error( err );
+    function(err) {
+        console.error(err);
     }
 );
 ```
