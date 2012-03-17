@@ -22,16 +22,21 @@ Usage
 Create a client and then call one of the exposed methods. See the 
 [Dark Sky API](http://darkskyapp.com/api/) for details.
 
-    var darksky = require("darksky");
-    var client = darksky.Client("mykey");
+```javascript
+var darksky = require("darksky");
+var client = darksky.Client("mykey");
   
-    client.forecast('37.8267','-122.423', 
-      function(data) {
+client.forecast('37.8267','-122.423', 
+    function(data) {
         process.stdout.write(d);
-      },
-      function( err ) {
+    },
+    function( err ) {
         console.error( err );
-      }
-    );
+    }
+);
+```
 
+Copyright
+---------
 
+Copyright (c) 2012 Aaron Westendorf. See LICENSE for further details.
