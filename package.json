@@ -1,6 +1,6 @@
 {
   "name": "darksky",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dark Sky API wrapper for nodeJS",
   "homepage": [
     "https://github.com/awestendorf/node-darksky"
@@ -12,7 +12,8 @@
   "keywords": [
     "api",
     "nodejs",
-    "7digital"
+    "darksky",
+    "weather"
   ],
   "author": "Aaron Westendorf <aaron.westendorf@gmail.com> (https://github.com/awestendorf)",
   "licenses": [
