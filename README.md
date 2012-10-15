@@ -27,11 +27,11 @@ var darksky = require("darksky");
 var client = darksky.Client("mykey");
   
 client.forecast('37.8267','-122.423', 
-    function(data) {
+    function(err, data) {
+        if (err) {
+            console.error(err);
+        }
         process.stdout.write(data);
-    },
-    function(err) {
-        console.error(err);
     }
 );
 ```
