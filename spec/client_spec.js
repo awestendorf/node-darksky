@@ -21,23 +21,20 @@ it("should create a client with api key set", function() {
 
 it("should call https request and all optional callbacks", function() {
   var callback = jasmine.createSpy();
-  var error = jasmine.createSpy();
   var request = {
     on : jasmine.createSpy(),
     end : jasmine.createSpy()
   };
   spyOn( callback, "call" );
-  spyOn( error, "call");
   var request_spy = spyOn( https, "request");
   request_spy.andReturn( request );
 
-  client.call("options", callback, error);
+  client.call("options", callback);
   // TODO: jasmine should support this style of call!
   // expect( https.request ).toHaveBeenCalledWith(["options", Function]);
   
   // Assert all the calls that would have happened
   expect( request_spy.argsForCall[0][0] ).toEqual("options");
-  expect( request.on.argsForCall[0][0] ).toEqual("error");
   expect( request.end ).toHaveBeenCalled();
   
   // Call the request callback to assert that it registers for data
@@ -50,15 +47,10 @@ it("should call https request and all optional callbacks", function() {
   // Call the data callback to assert that it calls our callback
   result.on.argsForCall[0][1]("data");
   expect( callback ).toHaveBeenCalledWith("data");
-
-  // Call the error callback to assert that it calls our callback
-  request.on.argsForCall[0][1]("error");
-  expect( error ).toHaveBeenCalledWith("error");
 });
 
 it("should call https request without optional callbacks", function() {
   var callback = jasmine.createSpy();
-  var error = jasmine.createSpy();
   var request = {
     on : jasmine.createSpy(),
     end : jasmine.createSpy()
@@ -89,7 +81,7 @@ it("should call https request without optional callbacks", function() {
 it("should fetch the forecast", function()
 {
   var call = spyOn( client, "call" );
-  client.forecast("3.14", "1.42", "callback", "error");
+  client.forecast("3.14", "1.42", "callback");
   
   expect( call ).toHaveBeenCalledWith(
     {
@@ -97,14 +89,14 @@ it("should fetch the forecast", function()
       port : 443,
       path : "/v1/forecast/api_key/3.14,1.42",
       method : 'GET'
-    }, "callback", "error"
+    }, "callback"
   );
 });
 
 it("should fetch the brief forecast", function()
 {
   var call = spyOn( client, "call" );
-  client.brief_forecast("3.14", "1.42", "callback", "error");
+  client.brief_forecast("3.14", "1.42", "callback");
   
   expect( call ).toHaveBeenCalledWith(
     {
@@ -112,7 +104,7 @@ it("should fetch the brief forecast", function()
       port : 443,
       path : "/v1/brief_forecast/api_key/3.14,1.42",
       method : 'GET'
-    }, "callback", "error"
+    }, "callback"
   );
 });
 
@@ -127,7 +119,7 @@ it("should fetch the precipitation for a single location", function()
       port : 443,
       path : "/v1/precipitation/api_key/3.14,1.42,now",
       method : 'GET'
-    }, "callback", "error"
+    }, "callback"
   );
 });
 
@@ -142,7 +134,7 @@ it("should fetch the precipitation for multiple locations", function()
       port : 443,
       path : "/v1/precipitation/api_key/3.14,1.42,now;4.23,-7.58,soon",
       method : 'GET'
-    }, "callback", "error"
+    }, "callback"
   );
 });
 
@@ -157,7 +149,7 @@ it("should fetch interesting weather", function()
       port : 443,
       path : "/v1/interesting/api_key",
       method : 'GET'
-    }, "callback", "error"
+    }, "callback"
   );
 });
 
