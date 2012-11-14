@@ -46,7 +46,7 @@ it("should call https request and all optional callbacks", function() {
   
   // Call the data callback to assert that it calls our callback
   result.on.argsForCall[0][1]("data");
-  expect( callback ).toHaveBeenCalledWith("data");
+  expect( callback ).toHaveBeenCalledWith(null, "data");
 });
 
 it("should call https request without optional callbacks", function() {
