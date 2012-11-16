@@ -1,6 +1,6 @@
 {
   "name": "darksky",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Dark Sky API wrapper for nodeJS",
   "homepage": [
     "https://github.com/awestendorf/node-darksky"
