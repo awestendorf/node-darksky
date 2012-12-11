@@ -24,7 +24,7 @@ Dark Sky [API](http://darkskyapp.com/api/) for details.
 
 ```javascript
 var darksky = require("darksky");
-var client = darksky.Client("mykey");
+var client = new darksky.Client("mykey");
   
 client.forecast('37.8267','-122.423', 
     function(err, data) {
